@@ -21,11 +21,7 @@ using System.IO;
 namespace TestovaciProjekt
 {
 
-    class Point
-    {
-        public double X { get; set; }
-        public double Y { get; set; }
-    }
+ 
 
     public class Program
     {
@@ -34,8 +30,8 @@ namespace TestovaciProjekt
         {
 
             ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  
-            TovarnaNaAuta b = TovarnaNaAuta();
-            
+            Budova b = Factory.PostavBudovu(TypBudovy.RodinnyDum);
+            Console.WriteLine(b.GetObvod()); 
             Console.ReadKey();
             ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  
             

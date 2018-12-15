@@ -14,9 +14,9 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             switch (typBudovy)
             {
                 case TypBudovy.Panelak:
-                    return new Panelak();
+                    return new Panelak(5, 5, 3 );
                 case TypBudovy.RodinnyDum:
-                    return new RodinnyDum();
+                    return new RodinnyDum(5,5,Barva.Black);
                 default:
                     throw new Exception("Neznámý typ budovy");
             }
@@ -25,16 +25,19 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
 
     public class RodinnyDum : Budova
     {
-        public string Barva { get; set; } = "red";
+        public Barva Barva { get; set; }
 
-        public RodinnyDum()
+        public RodinnyDum(int vyska,int sirka, Barva barva)
         {
+            Vyska = vyska;
+            Sirka = sirka;
+            Barva = barva;
         }
         public override int GetObvod()
         {
             return Sirka * Vyska;
         }
-        public string ZiskejBarvu()
+        public Barva ZiskejBarvu()
         {
             return Barva;
         }
@@ -42,10 +45,13 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
 
     public class Panelak : Budova
     {
-        public int Vchody { get; set; } = 5;
+        public int Vchody { get; set; }
 
-        public Panelak()
+        public Panelak(int vyska, int sirka, int vchody)
         {
+            Vyska = vyska;
+            Sirka = sirka;
+            Vchody = vchody;
         }
         public override int GetObvod()
         {
@@ -61,7 +67,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
     {
         public int Sirka { get; set; }
         public int Vyska { get; set; }
-        public int Obvod { get; set; }
+        private int Obvod { get; set; }
         public abstract int GetObvod();
     }
 
