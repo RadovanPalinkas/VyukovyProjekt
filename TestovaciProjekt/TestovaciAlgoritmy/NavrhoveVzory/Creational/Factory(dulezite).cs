@@ -9,6 +9,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
 
     public class Factory
     {
+        //Funkce která vytvoří instanci donné třídy
         public static Budova PostavBudovu(TypBudovy typBudovy)
         {
             switch (typBudovy)
@@ -22,7 +23,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             }
         }
     }
-
+    //Potomek 1
     public class RodinnyDum : Budova
     {
         public Barva Barva { get; set; }
@@ -42,7 +43,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             return Barva;
         }
     }
-
+    //Potomek 2
     public class Panelak : Budova
     {
         public int Vchody { get; set; }
@@ -62,7 +63,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             return Vchody;
         }
     }
-
+    //Rodič
     public abstract class Budova
     {
         public int Sirka { get; set; }
@@ -71,7 +72,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
         public abstract int GetObvod();
     }
 
-
+    //Nezajímavé 
     public enum TypBudovy
     {
         RodinnyDum,
