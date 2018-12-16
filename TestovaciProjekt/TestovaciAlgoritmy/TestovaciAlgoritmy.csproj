@@ -58,6 +58,7 @@
     <Compile Include="LambdaVyrazy.cs" />
     <Compile Include="LazyLoading.cs" />
     <Compile Include="NavrhoveVzory\Contract%28dulezite%29.cs" />
+    <Compile Include="NavrhoveVzory\Creational\FactoryTwo.cs" />
     <Compile Include="NavrhoveVzory\Repository.cs" />
     <Compile Include="NavrhoveVzory\SOLID Principles\DependenciInversion.cs" />
     <Compile Include="NavrhoveVzory\SOLID Principles\InterfaceSegregation.cs" />
