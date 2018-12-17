@@ -9,7 +9,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
 
     public class Factory
     {
-        //Funkce která vytvoří instanci donné třídy
+        //Funkce která vytvoří instanci danné třídy
         public static IBudova PostavBudovu(TypBudovy typBudovy)
         {
             switch (typBudovy)

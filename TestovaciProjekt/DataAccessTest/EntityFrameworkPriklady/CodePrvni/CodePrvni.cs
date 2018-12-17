@@ -29,10 +29,18 @@ namespace DataAccessTest.EntityFrameworkPriklady.CodePrvni
         //DbSet namapuje instanci objektu 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Employee> Employees { get; set; }
 
-        public CodePrvni() : base(@"Data Source=DESKTOP-ECHHB9J\RADOVANSQL;Initial Catalog=AhojData; Integrated Security = True")
+        public CodePrvni() : base(@"Data Source=DESKTOP-ECHHB9J\RADOVANSQL;Initial Catalog=Test; Integrated Security = True")
         {            
         }
+    }
+
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }      
+        public DateTime HireDate { get; set; }
     }
 
     public class Customer

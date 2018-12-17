@@ -17,6 +17,7 @@ using DataAccessTest.EntityFrameworkPriklady.DatabasePrvni;
 using DataAccessTest.EntityFrameworkPriklady.CodePrvni;
 using System.Security.Cryptography;
 using System.IO;
+using TestovaciAlgoritmy.NavrhoveVzory;
 
 namespace TestovaciProjekt
 {
@@ -29,17 +30,21 @@ namespace TestovaciProjekt
         public static void Main(string[] args)
         {
 
-            ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  
 
+            var rep = new UserRepository();
+            
+
+
+            ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  
             //PaymentProcessor pp = new PaymentProcessor();
             //pp.MakePayment(PaymentMethod.BANK_ONE, new TestovaciAlgoritmy.NavrhoveVzory.Creational.Product() { Name="Kolo",Price=4,Description="Toto je moje nove kolo"});
 
-            PaymentProcessor2 pp2 = new PaymentProcessor2();
-            pp2.MakePayment(PaymentMethod.PAYPAL, new TestovaciAlgoritmy.NavrhoveVzory.Creational.Product() { Name = "Kolo", Price = 4, Description = "Toto je moje nove kolo" });
+            //PaymentProcessor2 pp2 = new PaymentProcessor2();
+            //pp2.MakePayment(PaymentMethod.PAYPAL, new TestovaciAlgoritmy.NavrhoveVzory.Creational.Product() { Name = "Kolo", Price = 4, Description = "Toto je moje nove kolo" });
 
-            //IBudova b = Factory.PostavBudovu(TypBudovy.RodinnyDum);            
-            //Console.WriteLine(b.ZiskejObvod()); 
-            Console.ReadKey();
+            //IBudova b = Factory.PostavBudovu(TypBudovy.RodinnyDum);
+            //Console.WriteLine(b.ZiskejObvod());
+            //Console.ReadKey();
             ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  
 
             ////DOS ÚTOK----------------------------------------------------------------------------------------------------------------------------  
@@ -65,10 +70,16 @@ namespace TestovaciProjekt
             //ocs.VykonejCheck(new BagCheck("sentinel", "palinkas", 5));
             ////OPENCLOSE----------------------------------------------------------------------------------------------------------------------------------
 
-            //Entity Framework--------------------------------------------------------------------------------------------------------------------------
+
+
+            //UnitOfWork uow = new UnitOfWork();
+            //uow.DoWork();
+
+
+            ////Entity Framework--------------------------------------------------------------------------------------------------------------------------
             //DoClass dc = new DoClass();
             //dc.CreateTable();
-            //Entity Framework--------------------------------------------------------------------------------------------------------------------------
+            ////Entity Framework--------------------------------------------------------------------------------------------------------------------------
 
             ////SERIALIZACE JSON--------------------------------------------------------------------------------------------------------------------------
             //SerializaceJSON sj = new SerializaceJSON();
