@@ -18,6 +18,7 @@ using DataAccessTest.EntityFrameworkPriklady.CodePrvni;
 using System.Security.Cryptography;
 using System.IO;
 using TestovaciAlgoritmy.NavrhoveVzory;
+using System.Diagnostics;
 
 namespace TestovaciProjekt
 {
@@ -31,9 +32,11 @@ namespace TestovaciProjekt
         {
 
 
-            var rep = new UserRepository();
-            
 
+
+            ////REPOSITORY----------------------------------------------------------------------------------------------------------------------------  
+            //var rep = new UserRepository();
+            ////REPOSITORY----------------------------------------------------------------------------------------------------------------------------  
 
             ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  
             //PaymentProcessor pp = new PaymentProcessor();
@@ -105,6 +108,10 @@ namespace TestovaciProjekt
             //AsyncAwait aw = new AsyncAwait();
             //aw.Vykonej();
 
+            Worker wk = new Worker();                   
+            //wk.RunDownloadAsync();
+            wk.RunDownloadParalerAsync();
+            Console.ReadKey();
 
             //ProducentSpotrebitelAutoResetEvent psare = new ProducentSpotrebitelAutoResetEvent();
             //psare.Vykonej();
