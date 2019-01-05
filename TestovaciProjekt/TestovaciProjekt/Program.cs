@@ -30,9 +30,16 @@ namespace TestovaciProjekt
 
         public static void Main(string[] args)
         {
+            //STRING----------------------------------------------------------------------------------------------------------------
+            StringMoznosti sm = new StringMoznosti();
+            sm.Vykonej();
 
+            //STRING----------------------------------------------------------------------------------------------------------------
 
-
+            ////IO------------------------------------------------------------------------------------------------------------
+            //PraceSeSouboryIO pssi = new PraceSeSouboryIO();
+            //pssi.Vykonej();
+            ////IO------------------------------------------------------------------------------------------------------------
 
             ////REPOSITORY----------------------------------------------------------------------------------------------------------------------------  
             //var rep = new UserRepository();
@@ -108,10 +115,10 @@ namespace TestovaciProjekt
             //AsyncAwait aw = new AsyncAwait();
             //aw.Vykonej();
 
-            Worker wk = new Worker();                   
+            //Worker wk = new Worker();                   
             //wk.RunDownloadAsync();
-            wk.RunDownloadParalerAsync();
-            Console.ReadKey();
+            //wk.RunDownloadParalerAsync();
+            //Console.ReadKey();
 
             //ProducentSpotrebitelAutoResetEvent psare = new ProducentSpotrebitelAutoResetEvent();
             //psare.Vykonej();

@@ -46,8 +46,8 @@ namespace TestovaciAlgoritmy.Serializace
 
         public Studen()
         {
-            //tento konstruktou tu musí v tomto příkladu být, protože při deserializaci je volán konstruktor. A my potřebujeme aby byl volán prázdný konstruktor
-            //místo našeho druhého konstruktoru níže.
+            //tento konstruktou tu musí v tomto příkladu být, protože při deserializaci je volán konstruktor. 
+            //A my potřebujeme aby byl volán prázdný konstruktor místo našeho druhého konstruktoru níže.
         }
         public Studen(int id, string jm, string pr, params Predmet[] predm)
         {

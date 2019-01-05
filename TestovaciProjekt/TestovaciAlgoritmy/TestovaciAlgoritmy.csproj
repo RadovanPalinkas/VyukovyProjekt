@@ -55,6 +55,7 @@
     <Compile Include="BinaryTree.cs" />
     <Compile Include="Cashovani.cs" />
     <Compile Include="Indexace.cs" />
+    <Compile Include="KeyWorldUsing.cs" />
     <Compile Include="LambdaVyrazy.cs" />
     <Compile Include="LazyLoading.cs" />
     <Compile Include="NavrhoveVzory\Contract%28dulezite%29.cs" />
@@ -67,11 +68,13 @@
     <Compile Include="NavrhoveVzory\SOLID Principles\SingleResponsibilityPrinciple.cs" />
     <Compile Include="NavrhoveVzory\UnitOfWork%28dulezite%29.cs" />
     <Compile Include="PointsDistance.cs" />
+    <Compile Include="PraceSeSouboryIO.cs" />
     <Compile Include="RegulerniVyraz.cs" />
     <Compile Include="Serializace\SerializaceBinary.cs" />
     <Compile Include="Serializace\SerializaceJSON.cs" />
     <Compile Include="Serializace\SerializaceXML.cs" />
     <Compile Include="Slovnik.cs" />
+    <Compile Include="StringMoznosti.cs" />
     <Compile Include="UtokDOS.cs" />
     <Compile Include="ValidateAntiForgeryToken.cs" />
     <Compile Include="Vlakna\AbortAndThreadState.cs" />
@@ -130,6 +133,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ZdrojSouradnic.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

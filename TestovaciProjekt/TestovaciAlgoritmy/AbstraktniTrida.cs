@@ -8,17 +8,28 @@ namespace TestovaciAlgoritmy
 {
     //je určená jako předpis pro dědění může obsahovat i implementaci avšak nemůžou být vytvářeny instance tudíž nelze implementovat konstruktor. 
     //může dědit z jiných tříd a může implementovat interface.
+    public class Test
+    {
+        public void create()
+        {
+
+        }
+    }
+
     public abstract class AbstraktniTrida
     {
         protected int a { get; set; }
-       
+
         protected AbstraktniTrida()
         {
         }
-       protected AbstraktniTrida(int cislo)
+        protected AbstraktniTrida(int cislo)
         {
             a = cislo;
         }
+
+        public abstract void prepis();
+       
         public virtual void Nastav(int cisloA)
         {
             a = cisloA;
@@ -37,7 +48,7 @@ namespace TestovaciAlgoritmy
         {
         }
         public DedicAbstraktniTridy(int cislo) : base(cislo) //tento konstruktor použije impementaci z konstruktoru abstract. tridy
-        {            
+        {
         }
         public DedicAbstraktniTridy(int cisloA, int cisloB) : this(cisloA) // this.() pošle proměnnou do předešlého konstruktoru a vykoná jeho logiku
         {
@@ -45,20 +56,24 @@ namespace TestovaciAlgoritmy
         }
         public override void Nastav(int cisloA) // přepisování = polymorhismus
         {
-            base.Nastav(cisloA + 2);            
+            base.Nastav(cisloA + 2);
         }
         public void Nastav(int cisloA, int cisloB) // přetěžování = polymorphismus
         {
             base.Nastav(cisloA);
-            this.b = cisloB + 2;            
+            this.b = cisloB + 2;
         }
         public override void Vypis()
         {
-            base.Vypis() ;
+            base.Vypis();
             Console.WriteLine(b);
         }
 
+        public override void prepis()
+        {
+            Console.WriteLine("AHOJ");
+        }
 
     }
-
+     
 }
