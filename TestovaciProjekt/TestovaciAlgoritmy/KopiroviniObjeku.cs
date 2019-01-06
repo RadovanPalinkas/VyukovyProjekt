@@ -13,6 +13,7 @@ namespace TestovaciAlgoritmy
             //Vzorový priklad
             TridaVzor t1 = new TridaVzor { a = 2 };
             TridaVzor t2;
+            
             //špatně .... pouze se přehodí reference
             t2 = t1;
             //vykonej mělkou kopii

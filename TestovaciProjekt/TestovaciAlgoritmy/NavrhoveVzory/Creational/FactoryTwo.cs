@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
 {
+    //volání základní faktory
     public class PaymentProcessor
     {
         IPaymentGateway gateway = null;
 
-        public void MakePayment(PaymentMethod method, Product product)
+        public void VykonejPlatbu(PaymentMethod method, Product product)
         {
             FactoryTwo factory = new FactoryTwo();
             this.gateway = factory.CreatePaymentGateway(method, product);
@@ -18,11 +19,12 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             this.gateway.MakePayment(product);
         }
     }
-    public class PaymentProcessor2
+    //volání rozšířené faktory
+    public class PaymentProcessorExtensed
     {
         IPaymentGateway gateway = null;
 
-        public void MakePayment(PaymentMethod method, Product product)
+        public void VykonejPlatbu(PaymentMethod method, Product product)
         {
             FactoryTwo2 factory = new FactoryTwo2();
             this.gateway = factory.CreatePaymentGateway(method, product);
@@ -30,7 +32,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             this.gateway.MakePayment(product);
         }
     }
-
+    //základní
     class FactoryTwo
     {
         public virtual IPaymentGateway CreatePaymentGateway(PaymentMethod method, Product product)
@@ -59,6 +61,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
             return gateway;
         }
     }
+    //rozšíření o nějaké možnosti platby
     class FactoryTwo2 : FactoryTwo
     {
         public override IPaymentGateway CreatePaymentGateway(PaymentMethod method, Product product)
@@ -124,7 +127,6 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
         BANK_ONE,
         BANK_TWO,
         BEST_FOR_ME,
-
         PAYPAL,
         BILL_DESK
     }

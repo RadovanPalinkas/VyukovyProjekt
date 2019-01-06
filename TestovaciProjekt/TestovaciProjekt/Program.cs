@@ -12,9 +12,6 @@ using System.Reflection;
 using TestovaciAlgoritmy.NavrhoveVzory.SOLID_Principles;
 using TestovaciAlgoritmy.Serializace;
 using DataAccessTest;
-using DataAccessTest.EntityFrameworkPriklady;
-using DataAccessTest.EntityFrameworkPriklady.DatabasePrvni;
-using DataAccessTest.EntityFrameworkPriklady.CodePrvni;
 using System.Security.Cryptography;
 using System.IO;
 using TestovaciAlgoritmy.NavrhoveVzory;
@@ -22,19 +19,24 @@ using System.Diagnostics;
 
 namespace TestovaciProjekt
 {
-
- 
-
     public class Program
     {
 
         public static void Main(string[] args)
         {
-            //STRING----------------------------------------------------------------------------------------------------------------
-            StringMoznosti sm = new StringMoznosti();
-            sm.Vykonej();
 
-            //STRING----------------------------------------------------------------------------------------------------------------
+            Zasobnik zs = new Zasobnik();
+            zs.Vykonej();
+            Console.ReadKey();
+
+            //FibonaciOpakovani fo = new FibonaciOpakovani();
+            //fo.Vykonej();
+            //Console.ReadKey();
+
+            ////STRING----------------------------------------------------------------------------------------------------------------
+            //StringMoznosti sm = new StringMoznosti();
+            //sm.Vykonej();
+            ////STRING----------------------------------------------------------------------------------------------------------------
 
             ////IO------------------------------------------------------------------------------------------------------------
             //PraceSeSouboryIO pssi = new PraceSeSouboryIO();
@@ -43,6 +45,8 @@ namespace TestovaciProjekt
 
             ////REPOSITORY----------------------------------------------------------------------------------------------------------------------------  
             //var rep = new UserRepository();
+
+
             ////REPOSITORY----------------------------------------------------------------------------------------------------------------------------  
 
             ////FAKTORY----------------------------------------------------------------------------------------------------------------------------  

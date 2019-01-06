@@ -17,7 +17,7 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
                 case TypBudovy.Panelak:
                     return new Panelak(5, 5);
                 case TypBudovy.RodinnyDum:
-                    return new RodinnyDum(5,5,Barva.Black);
+                    return new RodinnyDum(5,5);
                 default:
                     throw new Exception("Neznámý typ budovy");
             }
@@ -29,22 +29,19 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
         public int Sirka { get; set; }
         public int Vyska { get; set; }
         public int Obvod { get; set; }
-        public Barva Barva { get; set; }
+        
 
-        public RodinnyDum(int vyska,int sirka, Barva barva)
+        public RodinnyDum(int vyska,int sirka)
         {
             Vyska = vyska;
             Sirka = sirka;
-            Barva = barva;
+           
         }
         public int ZiskejObvod()
         {
             return Sirka * Vyska;
         }
-        public Barva ZiskejBarvu()
-        {
-            return Barva;
-        }
+       
     }
     //Potomek 2
     public class Panelak : IBudova
@@ -79,12 +76,5 @@ namespace TestovaciAlgoritmy.NavrhoveVzory.Creational
         RodinnyDum,
         Panelak
     }
-    public enum Barva
-    {
-        Red,
-        Blue,
-        Black,
-        Yelow,
-        Green
-    }
+  
 }

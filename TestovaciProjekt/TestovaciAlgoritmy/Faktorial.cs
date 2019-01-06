@@ -32,41 +32,4 @@ namespace TestovaciAlgoritmy
             return vysledek;
         }
     }
-
-
-
-
-
-
-
-
-
-    public class Fakt
-    {
-        
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
